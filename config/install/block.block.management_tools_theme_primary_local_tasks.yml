@@ -1,0 +1,19 @@
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - management_tools_theme
+id: management_tools_theme_primary_local_tasks
+theme: management_tools_theme
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }

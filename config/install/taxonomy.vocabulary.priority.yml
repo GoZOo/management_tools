@@ -1,0 +1,8 @@
+langcode: fr
+status: true
+dependencies: {  }
+name: Priority
+vid: priority
+description: 'Set priority for issues'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,32 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_type
+field_name: field_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: issue
+      label: Issue
+    -
+      value: feature
+      label: 'New feature'
+    -
+      value: task
+      label: Task
+    -
+      value: question
+      label: Question
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

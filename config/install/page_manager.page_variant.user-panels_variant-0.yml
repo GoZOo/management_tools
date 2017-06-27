@@ -1,0 +1,52 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - page_manager.page.user
+    - views.view.my_groups
+    - views.view.tickets_user
+  module:
+    - panels
+    - views
+id: user-panels_variant-0
+label: Dashboard
+variant: panels_variant
+variant_settings:
+  blocks:
+    c9f71dcd-8e28-4b57-9089-a5a17780855d:
+      id: 'views_block:my_groups-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: right
+      weight: 0
+      uuid: c9f71dcd-8e28-4b57-9089-a5a17780855d
+      context_mapping: {  }
+    9cac6c43-c611-4426-b845-e0515f97ef52:
+      id: 'views_block:tickets_user-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: left
+      weight: 0
+      uuid: 9cac6c43-c611-4426-b845-e0515f97ef52
+      context_mapping: {  }
+  id: panels_variant
+  uuid: a331bf56-22af-4da0-a102-f7f6470b7b30
+  label: null
+  weight: 0
+  page_title: ''
+  layout: layout_twocol
+  layout_settings: {  }
+  storage_type: page_manager
+  storage_id: user-panels_variant-0
+  builder: standard
+page: user
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

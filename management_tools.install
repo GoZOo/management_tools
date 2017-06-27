@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function management_tools_install() {
+  $extension_config = \Drupal::configFactory()->getEditable('core.extension');
+  $module = 'field_group';
+  if ($extension_config->get("module.$module") !== NULL) {
+    $weight = $extension_config->get("module.$module") + 1;
+    module_set_weight('management_tools', $weight);
+  }
+}

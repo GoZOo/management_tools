@@ -1,0 +1,21 @@
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Utilisateur authentifié'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'use editorial transition publish'
+  - 'use text format filtered_html'
+  - 'use ticket_moderation transition create_new_draft'
+  - 'use ticket_moderation transition deploy_to_preprod'
+  - 'use ticket_moderation transition development_tests'
+  - 'use ticket_moderation transition done'
+  - 'use ticket_moderation transition in_progress'
+  - 'use ticket_moderation transition publish'
+  - 'use ticket_moderation transition publish_back'
+  - 'use user.default form mode'

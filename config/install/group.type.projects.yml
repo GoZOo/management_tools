@@ -1,0 +1,8 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: projects
+label: Projects
+description: ''
+creator_roles:
+  - projects-admin

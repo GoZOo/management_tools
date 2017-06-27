@@ -1,0 +1,8 @@
+langcode: fr
+status: true
+dependencies: {  }
+name: Category
+vid: category
+description: 'Define categories for issues'
+hierarchy: 0
+weight: 0

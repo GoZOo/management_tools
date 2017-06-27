@@ -1,0 +1,13 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - group.type.projects
+id: projects-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: projects
+permissions_ui: true
+permissions: {  }

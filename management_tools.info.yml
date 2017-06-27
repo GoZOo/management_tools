@@ -1,0 +1,26 @@
+name: 'Tools management'
+description: 'Some tools to help you with management, like light issue management'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - content_moderation
+  - features
+  - field
+  - field_group
+  - gnode
+  - group
+  - language
+  - menu_ui
+  - node
+  - options
+  - page_manager
+  - panels
+  - path
+  - system
+  - taxonomy
+  - text
+  - management_tools_theme
+  - user
+  - views
+  - workflows

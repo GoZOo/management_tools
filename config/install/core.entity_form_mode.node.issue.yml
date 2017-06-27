@@ -1,0 +1,9 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.issue
+label: Issue
+targetEntityType: node
+cache: true

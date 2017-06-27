@@ -1,0 +1,24 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_assigned_to
+    - node.type.issue
+id: node.issue.field_assigned_to
+field_name: field_assigned_to
+entity_type: node
+bundle: issue
+label: 'Assigned to'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: group_members_reference
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

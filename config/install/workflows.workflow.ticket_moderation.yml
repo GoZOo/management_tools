@@ -1,0 +1,144 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.issue
+  module:
+    - content_moderation
+id: ticket_moderation
+label: 'Ticket moderation'
+states:
+  client_test:
+    label: 'Client test'
+    weight: 2
+  deploy_to_preprod:
+    label: 'Deploy to preprod'
+    weight: 4
+  deploy_to_prod:
+    label: 'Deploy to prod'
+    weight: 5
+  development_tests:
+    label: 'Development tests'
+    weight: 3
+  done:
+    label: Done
+    weight: 6
+  draft:
+    label: Draft
+    weight: -5
+  in_progress:
+    label: 'In progress'
+    weight: 1
+  published:
+    label: Active
+    weight: 0
+transitions:
+  client_test:
+    label: 'Client test'
+    from:
+      - client_test
+      - deploy_to_preprod
+      - deploy_to_prod
+      - development_tests
+      - in_progress
+      - published
+    to: client_test
+    weight: 3
+  create_new_draft:
+    label: 'Create New Draft'
+    from:
+      - draft
+      - published
+    to: draft
+    weight: 0
+  deploy_to_preprod:
+    label: 'Deploy to preprod'
+    from:
+      - client_test
+      - deploy_to_preprod
+      - deploy_to_prod
+      - development_tests
+      - in_progress
+      - published
+    to: deploy_to_preprod
+    weight: 6
+  development_tests:
+    label: 'Development tests'
+    from:
+      - client_test
+      - deploy_to_preprod
+      - deploy_to_prod
+      - development_tests
+      - in_progress
+      - published
+    to: development_tests
+    weight: 5
+  done:
+    label: Done
+    from:
+      - client_test
+      - deploy_to_preprod
+      - deploy_to_prod
+      - development_tests
+      - in_progress
+      - published
+    to: done
+    weight: 7
+  in_progress:
+    label: 'In progress'
+    from:
+      - client_test
+      - deploy_to_preprod
+      - deploy_to_prod
+      - development_tests
+      - in_progress
+      - published
+    to: in_progress
+    weight: 4
+  publish:
+    label: Publish
+    from:
+      - draft
+      - published
+    to: published
+    weight: 1
+  publish_back:
+    label: 'Publish back'
+    from:
+      - client_test
+      - deploy_to_preprod
+      - deploy_to_prod
+      - development_tests
+      - in_progress
+    to: published
+    weight: 2
+type: content_moderation
+type_settings:
+  states:
+    client_test:
+      published: true
+      default_revision: false
+    deploy_to_preprod:
+      published: true
+      default_revision: false
+    deploy_to_prod:
+      published: true
+      default_revision: false
+    development_tests:
+      published: true
+      default_revision: false
+    done:
+      published: true
+      default_revision: false
+    draft:
+      published: false
+      default_revision: false
+    in_progress:
+      published: true
+      default_revision: false
+    published:
+      published: true
+      default_revision: true
+  entity_types:
+    node:
+      - issue

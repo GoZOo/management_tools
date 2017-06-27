@@ -1,0 +1,31 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_priority
+    - node.type.issue
+    - taxonomy.vocabulary.priority
+  content:
+    - 'taxonomy_term:priority:d2e0a5cd-8141-4f1e-84d3-7f4b50346fc8'
+id: node.issue.field_priority
+field_name: field_priority
+entity_type: node
+bundle: issue
+label: Priority
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: d2e0a5cd-8141-4f1e-84d3-7f4b50346fc8
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      priority: priority
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

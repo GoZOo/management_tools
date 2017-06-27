@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains management_tools.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function management_tools_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the management_tools module.
+    case 'help.page.management_tools':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Some tools to help you with management, like light issue management') . '</p>';
+      return $output;
+
+    default:
+  }
+}

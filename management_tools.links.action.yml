@@ -1,0 +1,4 @@
+management_tools.action_links_add:
+  class: \Drupal\Core\Menu\LocalActionDefault
+  deriver: \Drupal\management_tools\Plugin\Derivative\ManagementToolsLocalAction
+  weight: 100

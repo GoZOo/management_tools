@@ -1,0 +1,39 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.issue.body
+    - field.field.node.issue.field_assigned_to
+    - field.field.node.issue.field_category
+    - field.field.node.issue.field_priority
+    - field.field.node.issue.field_type
+    - node.type.issue
+  module:
+    - text
+    - user
+id: node.issue.teaser
+targetEntityType: node
+bundle: issue
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_assigned_to: true
+  field_category: true
+  field_priority: true
+  field_type: true
+  langcode: true
